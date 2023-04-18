@@ -43,7 +43,7 @@ export function ContactEditPage() {
     const { name, email, phone } = contact
     return (
         <section className='contact-edit'>
-            <h1>{contact._id ? 'Edit' : 'Add'} contact</h1>
+            <h1>{contact._id ? 'Edit' : 'Add'} Contact</h1>
             <form onSubmit={onSaveContact}>
                 <label htmlFor="name">Name</label>
                 <input value={name} onChange={handleChange} type="text" name="name" id="name" />
@@ -52,7 +52,7 @@ export function ContactEditPage() {
                 <label htmlFor="phone">Phone</label>
                 <input value={phone} onChange={handleChange} type="text" name="phone" id="phone" />
 
-                <button>Save</button>
+                <button>{contact._id ? 'Edit' : 'Add'} Contact</button>
             </form>
         </section>
     )

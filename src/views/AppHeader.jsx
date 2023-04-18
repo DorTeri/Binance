@@ -15,7 +15,7 @@ export function AppHeader(props) {
     return (
         <header className="app-header full main-layout">
             <section className="nav-content flex align-center space-between">
-                {getSvg('logo')}
+                <NavLink to="/">{getSvg('logo')}</NavLink>
                 <nav className="nav-links">
                     <button onClick={() => setIsScreen(true)} className="btn-deposit flex align-center"><span>{getSvg('deposit')}</span> Deposit</button>
                     {/* <NavLink exact to="/" >Home</NavLink>
