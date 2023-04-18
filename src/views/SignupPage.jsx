@@ -3,6 +3,7 @@ import { userService } from '../services/user.service'
 import { connect, useDispatch, useSelector } from 'react-redux'
 import { signup } from '../store/actions/user.actions';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export function SignupPage() {
@@ -23,7 +24,12 @@ export function SignupPage() {
         navigate('/')
     }
 
-    if (user) return <div>Start trading now {user.name}!</div>
+    if (user) return (
+        <div className='user-loggedin'>
+            Start trading now {user.name}!
+            <NavLink to="/"><button className='btn-action'>Start Now</button></NavLink>
+        </div>
+    )
     return (
         <section className='signup-section'>
             <h1>Sign up to get 100 USD trading fee!</h1>

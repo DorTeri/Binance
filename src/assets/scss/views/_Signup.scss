@@ -44,3 +44,12 @@
         }
     }
 }
+
+.user-loggedin {
+    padding: 20px;
+    display: grid;
+
+    .btn-action {
+        @include yellow-btn;
+    }
+}
