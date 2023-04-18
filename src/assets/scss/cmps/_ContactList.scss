@@ -1,6 +1,15 @@
 .contacts-list {
-    margin-top: 10px;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 20px;
+    width: 60%;
     display: grid;
     gap: 10px;
-    width: fit-content;
+    // width: fit-content;
+    place-self: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    > *:nth-child(even) {
+        background-color: rgb(252 , 213 , 53);
+    }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 
 export function MovesList({ title, movesList }) {
 
+    if(!movesList) return <div>No moves</div>
     return (
         <section className='moves-section'>
             <h3>{title}</h3>

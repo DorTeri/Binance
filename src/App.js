@@ -15,7 +15,7 @@ function App() {
       <section className="App main-layout">
         <AppHeader />
         <section className='main-content'>
-          <SideNav/>
+          <SideNav />
           <Routes>
             <Route path="/contacts/edit/:id?" element={<ContactEditPage />} />
             <Route path="/contact/:id" element={<ContactDetails />} />
