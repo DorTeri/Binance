@@ -4,9 +4,7 @@
     margin-top: 20px;
     width: 60%;
     display: grid;
-    gap: 10px;
-    // width: fit-content;
-    place-self: center;
+    justify-self: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     > *:nth-child(even) {

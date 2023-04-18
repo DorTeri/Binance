@@ -6,6 +6,8 @@ import { spendBalance } from '../store/actions/user.actions'
 import { connect, useDispatch, useSelector } from 'react-redux'
 import { MovesList } from '../cmps/MovesList'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { svgService } from '../services/svg.service'
+import { utilService } from '../services/util.service'
 
 export function ContactDetails() {
 
@@ -43,18 +45,24 @@ export function ContactDetails() {
         return moves.filter(move => move.toId === contact._id)
     }
 
+    function getSvg(iconName) {
+        return svgService.getSvg(iconName)
+    }
+
     if (!contact || !user) return <div>Loading...</div>
     return (
         <section className='contact-details'>
-            <Link to={`/contacts/edit/${contact._id}`}>Edit</Link>
-            <img src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg" alt="user" />
-            <h3>Name: {contact.name}</h3>
-            <h3>Phone: {contact.phone}</h3>
-            <h3>Email: {contact.name}</h3>
-            <button onClick={onBack}>Back</button>
-            {user.name}
-            <TransferFund contact={contact} maxCoins={user.coins} onTransferCoins={onTransferCoins} />
-            <MovesList title='Your moves' movesList={movesList(user.moves)} />
+            <div className='intro'></div>
+            <Link className='btn-edit' to={`/contacts/edit/${contact._id}`}>{getSvg('edit')}</Link>
+            <img className='user-img' src={utilService.getRandomImg()} alt="user" />
+            <div className='contact-content'>
+                <h2>{contact.name}</h2>
+                <h3>{contact.email}</h3>
+                <h3>{contact.phone}</h3>
+                <button className='btn-back' onClick={onBack}>Back</button>
+                <TransferFund contact={contact} maxCoins={user.coins} onTransferCoins={onTransferCoins} />
+                <MovesList title='Your moves' movesList={movesList(user.moves)} />
+            </div>
         </section>
     )
 }

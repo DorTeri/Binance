@@ -23,7 +23,7 @@ export function HomePage() {
         }
         setMarketPrice(getMarketPrice())
         getBitcoinRate()
-    }, [user.coins])
+    }, [user?.coins])
 
     async function getBitcoinRate() {
         const bitcoinRate = await bitcoinService.getRate(user.coins)

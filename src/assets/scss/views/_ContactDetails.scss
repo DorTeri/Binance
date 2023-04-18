@@ -1,5 +1,47 @@
 .contact-details {
-    img {
-        width: 80px;
+    position: relative;
+    display: grid;
+
+    .btn-edit {
+        position: absolute;
+        top: 130px;
+        right: 10px;
+    }
+
+    .intro {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 120px;
+        background: rgb(255, 246, 52);
+        background: linear-gradient(90deg, rgba(255, 246, 52, 1) 25%, rgba(255, 246, 139, 1) 54%, rgba(252, 254, 151, 1) 83%);
+        margin-bottom: 60px;
+    }
+
+    .user-img {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-content {
+        height: 60vh;
+        position: relative;
+        padding-left: 20px;
+
+        h3 {
+            color: rgb(132, 142, 156);
+            font-size: 14px;
+        }
+
+        .btn-back {
+            position: absolute;
+            bottom: 0;
+            @include yellow-btn;
+            padding: 5px 10px;
+        }
     }
 }

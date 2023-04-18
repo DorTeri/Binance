@@ -2,6 +2,7 @@ import React from 'react';
 import Avatar from 'react-avatar';
 import { Link, useNavigate } from 'react-router-dom';
 import { svgService } from '../services/svg.service';
+import { utilService } from '../services/util.service';
 
 
 export function ContactPreview({ contact, removeContact }) {
@@ -14,7 +15,7 @@ export function ContactPreview({ contact, removeContact }) {
 
     return (
         <article className='contact-preview'>
-            <Avatar className='avatar-img' name={contact.name} size="30" />
+            <img src={utilService.getRandomImg()} className='avatar-img' />
             <div className='contact-info' onClick={() => navigate(`/contact/${contact._id}`)}>
                 <Link to={`/contact/${contact._id}`} className='contact-name'>{contact.name}</Link>
                 <span className='contact-email'>{contact.email}</span>
