@@ -1,0 +1,31 @@
+.transfer-section {
+    margin-top: 10px;
+    gap: 10px;
+
+    .btn-open {
+        @include yellow-btn;
+    }
+
+    .btn-transfer {
+        @include yellow-btn;
+        padding: 5px;
+    }
+
+    .input-wrapper {
+
+        position: relative;
+
+        input {
+            outline: 0;
+            border: 0;
+            border-bottom: 2px solid
+        }
+
+        label {
+            position: absolute;
+            top: 0;
+            display: block;
+        }
+
+    }
+}

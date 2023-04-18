@@ -1,0 +1,12 @@
+.contact-page {
+    width: 100%;
+    position: relative;
+
+    .btn-add-contact {
+        @include yellow-btn;
+        text-decoration: none;
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+    }
+}
