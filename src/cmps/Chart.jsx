@@ -26,7 +26,7 @@ export const options = {
     responsive: true,
     plugins: {
         // title: {
-        //     display: true,
+        //     display: false,
         //     text: 'Chart.js Line Chart',
         // },
     },

@@ -1,0 +1,62 @@
+.screen-section {
+
+    .black-screen {
+        position: absolute;
+        pointer-events: none;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        z-index: 8;
+        background-color: #000;
+
+        &.active {
+            opacity: .45;
+        }
+    }
+
+    .screen {
+        position: absolute;
+        right: -100%;
+        width: 484px;
+        padding: 40px 24px;
+        z-index: 10;
+        background-color: #fff;
+        height: 100vh;
+        transition: .5s;
+
+        &.active {
+            right: 0;
+            transition: .5s;
+        }
+
+        .screen-title {
+            font-family: roboto-medium;
+            font-size: 14px;
+            color: rgb(30, 35, 41);
+
+            .btn-close-screen {
+                border: none;
+                background-color: inherit;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: rgb(146, 154, 165);
+                }
+            }
+        }
+    }
+
+    .deposit-action {
+        margin-top: 20px;
+        display: grid;
+        gap: 10px;
+
+        input {
+            width: 100%;
+            outline: 0;
+            border: 0;
+            border-bottom: 1px solid rgb(160, 160, 160);
+        }
+    }
+}

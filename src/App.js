@@ -9,11 +9,18 @@ import { ContactEditPage } from './views/ContactEditPage';
 import { ContactDetails } from './views/ContactDetails';
 import { SignupPage } from './views/SignupPage';
 import { SideNav } from './cmps/SideNav';
+import { SideScreen } from './cmps/SideScreen';
+import { useState } from 'react';
 function App() {
+
+  const [isScreen, setIsScreen] = useState(false)
+
+
   return (
     <Router>
       <section className="App main-layout">
-        <AppHeader />
+        <SideScreen isScreen={isScreen} setIsScreen={setIsScreen}/>
+        <AppHeader setIsScreen={setIsScreen}/>
         <section className='main-content'>
           <SideNav />
           <Routes>

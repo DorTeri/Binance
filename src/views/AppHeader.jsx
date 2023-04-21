@@ -1,11 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { svgService } from "../services/svg.service";
-import { useState } from "react";
-import { Deposit } from "../cmps/Deposit";
 
-export function AppHeader(props) {
-
-    const [isScreen, setIsScreen] = useState(false)
+export function AppHeader({ setIsScreen }) {
 
     function getSvg(iconName) {
         return svgService.getSvg(iconName)
@@ -16,22 +12,15 @@ export function AppHeader(props) {
         <header className="app-header full main-layout">
             <section className="nav-content flex align-center space-between">
                 <NavLink to="/">{getSvg('logo')}</NavLink>
-                <nav className="nav-links">
+                <nav className="nav-links flex align-center">
                     <button onClick={() => setIsScreen(true)} className="btn-deposit flex align-center"><span>{getSvg('deposit')}</span> Deposit</button>
-                    {/* <NavLink exact to="/" >Home</NavLink>
-                    <NavLink to="/contacts">Contacts</NavLink>
-                    <NavLink to="/statistics">statistics</NavLink>
-                    <NavLink to="/signup">Signup</NavLink> */}
+                    <div className="burger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </nav>
             </section>
-            <section className={`screen ${isScreen ? 'active' : ''}`}>
-                <div className="screen-title flex align-center space-between">
-                    <h2>Fund Your Wallet</h2>
-                    <button className="btn-close-screen" onClick={() => setIsScreen(false)}>{getSvg('x')}</button>
-                </div>
-                <Deposit closeScreen={setIsScreen}/>
-            </section>
-            <section className={`black-screen ${isScreen ? 'active' : ''}`}></section>
         </header>
     )
 }

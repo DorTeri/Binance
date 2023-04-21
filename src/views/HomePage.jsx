@@ -31,8 +31,10 @@ export function HomePage() {
     }
 
     async function getMarketPrice() {
-        const marketPrice = await bitcoinService.getMarketPrice()
-        setMarketPrice(JSON.parse(marketPrice))
+        let marketPrice = await bitcoinService.getMarketPrice()
+        marketPrice = JSON.parse(marketPrice)
+        marketPrice.values = marketPrice.values.splice(0, 5)
+        setMarketPrice(marketPrice)
     }
 
     if (!user || !marketPrice) return <div>Loading...</div>
