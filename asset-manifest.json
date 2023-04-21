@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Binance/static/css/main.1b507fb0.css",
-    "main.js": "/Binance/static/js/main.3d8a6c96.js",
+    "main.css": "/Binance/static/css/main.30e48ad8.css",
+    "main.js": "/Binance/static/js/main.abc3c66a.js",
     "static/js/787.887c022c.chunk.js": "/Binance/static/js/787.887c022c.chunk.js",
     "static/media/tree.avif": "/Binance/static/media/tree.00bf9b5942eee5290deb.avif",
     "static/media/Roboto-Medium.ttf": "/Binance/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Regular.ttf": "/Binance/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/Roboto-Bold.ttf": "/Binance/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
     "index.html": "/Binance/index.html",
-    "main.1b507fb0.css.map": "/Binance/static/css/main.1b507fb0.css.map",
-    "main.3d8a6c96.js.map": "/Binance/static/js/main.3d8a6c96.js.map",
+    "main.30e48ad8.css.map": "/Binance/static/css/main.30e48ad8.css.map",
+    "main.abc3c66a.js.map": "/Binance/static/js/main.abc3c66a.js.map",
     "787.887c022c.chunk.js.map": "/Binance/static/js/787.887c022c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b507fb0.css",
-    "static/js/main.3d8a6c96.js"
+    "static/css/main.30e48ad8.css",
+    "static/js/main.abc3c66a.js"
   ]
 }
